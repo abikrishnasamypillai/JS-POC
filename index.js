@@ -1,6 +1,6 @@
   
 arr=[];
-let id=1;
+let id=0;
 curr_val =null;
 const name=document.getElementById("name");
 const email=document.getElementById("email");
