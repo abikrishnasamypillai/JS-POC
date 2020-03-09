@@ -1,8 +1,9 @@
+  
 arr=[];
 let id=1;
 curr_val =null;
-const name1=document.getElementById("name");
-const mail1=document.getElementById("email");
+const name=document.getElementById("name");
+const email=document.getElementById("email");
 const btn=document.getElementById("cu-action");
 const tab=document.getElementById("todo-body");
 const edit1 = document.getElementById("edit-action");
@@ -14,8 +15,8 @@ function output()
          arr = arr.map(arr1=>{
              if(curr_val===arr1.id)
              {
-             arr1.name=name1.value;
-             arr1.mail=mail1.value;
+             arr1.name=name.value;
+             arr1.email=email.value;
          }
          return arr1;
         });
@@ -23,9 +24,9 @@ function output()
      }
      else {
     details={};
-    details.id = id++;
-    details.name=name1.value;
-    details.email=mail1.value;
+    details.id = ++id;
+    details.name=name.value;
+    details.email=email.value;
     arr.push(details);
      }
      display();
@@ -48,7 +49,7 @@ function display()
     reset();
 }
 function reset() {
-   name1.value="";
+   name.value="";
    email.value="";
 }
 function update_val(num, text) {
@@ -62,8 +63,8 @@ function delVal(temp) {
 }
 function updVal(temp) {
     let arr2 = arr.find(arr1=>arr1.id===temp);
-    name1.value=arr2.name;
-    mail1.value=arr2.email;
+    name.value=arr2.name;
+    email.value=arr2.email;
     update_val(arr2.id,'UPDATE')
 }
 document.getElementById("cu-action").addEventListener("click",output);
