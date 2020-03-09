@@ -67,4 +67,5 @@ function updVal(temp) {
     email.value=arr2.email;
     update_val(arr2.id,'UPDATE')
 }
+
 document.getElementById("cu-action").addEventListener("click",output);
