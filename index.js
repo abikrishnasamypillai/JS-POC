@@ -69,3 +69,4 @@ function updVal(temp) {
 }
 
 document.getElementById("cu-action").addEventListener("click",output);
+
