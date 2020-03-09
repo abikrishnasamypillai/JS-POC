@@ -15,7 +15,7 @@ function output()
              if(curr_val===arr1.id)
              {
              arr1.name=name1.value;
-             arr1.mail=email.value;
+             arr1.mail=mail1.value;
          }
          return arr1;
         });
